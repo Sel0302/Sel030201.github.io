@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Rasel Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <div class="logo-placeholder">
+                        <img src="img/rasel logo.png" alt="Rasel Logo" width="55" height="55" style="object-fit: cover; object-position: center;">
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="works.html" class="nav-link">Works</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link active">Resume</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Resume Section -->
+    <section class="resume-section">
+        <div class="resume-container">
+            <h1 class="resume-title animate-fade-up">My Resume</h1>
+            
+            <div class="resume-viewer animate-scale-in">
+                <iframe src="resume/Resume 2.0.pdf" class="resume-iframe"></iframe>
+            </div>
+            
+            <div class="resume-actions animate-fade-up-delay">
+                <a href="resume/Resume 2.0.pdf" download="Rasel_Resume.pdf" class="download-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-tabs">
+                <h3 class="footer-title">Tabs</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Multimedia All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

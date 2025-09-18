@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works - Rasel Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <div class="logo-placeholder">
+                        <img src="img/rasel logo.png" alt="Rasel Logo" width="55" height="55" style="object-fit: cover; object-position: center;">
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="works.html" class="nav-link active">Works</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">Resume</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Works Section -->
+    <section class="works-section">
+        <div class="works-container">
+            <h1 class="works-title animate-fade-up">My Works</h1>
+            
+            <div class="works-grid" id="worksGrid">
+                <!-- Logo Section -->
+                <div class="work-item logo-section animate-fade-up-delay" data-category="logo">
+                    <div class="work-images" onclick="showCategory('logo')">
+                        <img src="img/works/Logo 1.png" alt="Logo 1" class="work-image-placeholder">
+                        <img src="img/works/Logo 2.png" alt="Logo 2" class="work-image-placeholder">
+                        <img src="img/works/Logo 3.png" alt="Logo 3" class="work-image-placeholder">
+                    </div>
+                    <h3 class="work-category">Logo</h3>
+                </div>
+
+                <!-- 3D Art Section -->
+                <div class="work-item art-section animate-fade-up-delay-2" data-category="art">
+                    <div class="work-images" onclick="showCategory('art')">
+                        <img src="img/works/3d 1.png" alt="3D Art 1" class="work-image-placeholder">
+                        <img src="img/works/3d 2.png" alt="3D Art 2" class="work-image-placeholder">
+                        <img src="img/works/3d 3.png" alt="3D Art 3" class="work-image-placeholder">
+                    </div>
+                    <h3 class="work-category">3D Art</h3>
+                </div>
+
+                <!-- Photography Section -->
+                <div class="work-item photography-section animate-fade-up-delay-3" data-category="photography">
+                    <div class="work-images" onclick="showCategory('photography')">
+                        <img src="img/works/photography 1.jfif" alt="Photography 1" class="work-image-placeholder">
+                        <img src="img/works/photography 2.jfif" alt="Photography 2" class="work-image-placeholder">
+                        <img src="img/works/photography 3.jfif" alt="Photography 3" class="work-image-placeholder">
+                        <img src="img/works/photography 4.jfif" alt="Photography 4" class="work-image-placeholder">
+                        <img src="img/works/photography 5.jfif" alt="Photography 5" class="work-image-placeholder">
+                    </div>
+                    <h3 class="work-category">Photography</h3>
+                </div>
+
+                <!-- Typography Section -->
+                <div class="work-item typography-section animate-scale-in" data-category="typography">
+                    <div class="work-images" onclick="showCategory('typography')">
+                        <img src="img/works/Typography 1.png" alt="Typography 1" class="work-image-placeholder">
+                        <img src="img/works/Typography 2.png" alt="Typography 2" class="work-image-placeholder">
+                        <img src="img/works/Typography 3.png" alt="Typography 3" class="work-image-placeholder">
+                    </div>
+                    <h3 class="work-category">Typography</h3>
+                </div>
+            </div>
+            
+            <!-- Back Button -->
+            <button class="back-btn" id="backBtn" onclick="showAllCategories()" style="display: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Back to All Works
+            </button>
+            
+            <!-- Individual Category Views -->
+            <div class="category-view" id="logoView" style="display: none;">
+                <h2 class="category-title">Logo</h2>
+                <div class="category-grid">
+                    <img src="img/works/Logo 1.png" alt="Logo 1" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/Logo 2.png" alt="Logo 2" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/Logo 3.png" alt="Logo 3" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                </div>
+            </div>
+            
+            <div class="category-view" id="artView" style="display: none;">
+                <h2 class="category-title">3D Art</h2>
+                <div class="category-grid">
+                    <img src="img/works/3d 1.png" alt="3D Art 1" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/3d 2.png" alt="3D Art 2" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/3d 3.png" alt="3D Art 3" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                </div>
+            </div>
+            
+            <div class="category-view" id="photographyView" style="display: none;">
+                <h2 class="category-title">Photography</h2>
+                <div class="category-grid">
+                    <img src="img/works/photography 1.jfif" alt="Photography 1" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/photography 2.jfif" alt="Photography 2" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/photography 3.jfif" alt="Photography 3" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/photography 4.jfif" alt="Photography 4" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/photography 5.jfif" alt="Photography 5" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                </div>
+            </div>
+            
+            <div class="category-view" id="typographyView" style="display: none;">
+                <h2 class="category-title">Typography</h2>
+                <div class="category-grid">
+                    <img src="img/works/Typography 1.png" alt="Typography 1" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/Typography 2.png" alt="Typography 2" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                    <img src="img/works/Typography 3.png" alt="Typography 3" class="category-image-placeholder" onclick="openModal(this.src, this.alt)">
+                </div>
+            </div>
+            
+            <!-- Image Modal -->
+            <div class="image-modal" id="imageModal" onclick="closeModal()">
+                <span class="modal-close">&times;</span>
+                <img class="modal-image" id="modalImage">
+                <div class="modal-caption" id="modalCaption"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-tabs">
+                <h3 class="footer-title">Tabs</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Multimedia All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function showCategory(category) {
+            const worksGrid = document.getElementById('worksGrid');
+            const backBtn = document.getElementById('backBtn');
+            const categoryView = document.getElementById(category + 'View');
+            
+            // Hide main grid with animation
+            worksGrid.style.opacity = '0';
+            worksGrid.style.transform = 'translateY(-20px)';
+            
+            setTimeout(() => {
+                worksGrid.style.display = 'none';
+                categoryView.style.display = 'block';
+                backBtn.style.display = 'flex';
+                
+                // Show category view with animation
+                setTimeout(() => {
+                    categoryView.classList.add('active');
+                }, 50);
+            }, 300);
+        }
+        
+        function showAllCategories() {
+            const worksGrid = document.getElementById('worksGrid');
+            const backBtn = document.getElementById('backBtn');
+            const categoryViews = document.querySelectorAll('.category-view');
+            
+            // Hide all category views
+            categoryViews.forEach(view => {
+                view.classList.remove('active');
+                setTimeout(() => {
+                    view.style.display = 'none';
+                }, 300);
+            });
+            
+            backBtn.style.display = 'none';
+            
+            // Show main grid with animation
+            setTimeout(() => {
+                worksGrid.style.display = 'grid';
+                setTimeout(() => {
+                    worksGrid.style.opacity = '1';
+                    worksGrid.style.transform = 'translateY(0)';
+                }, 50);
+            }, 300);
+        }
+        
+        function openModal(src, alt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImage.src = src;
+            modalCaption.textContent = alt;
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
